@@ -6,7 +6,7 @@ export default function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DragonMaster />} />
-        {/* Add more routes here as your app grows */}
+        
       </Routes>
     </BrowserRouter>
   );

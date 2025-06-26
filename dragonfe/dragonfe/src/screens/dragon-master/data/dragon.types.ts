@@ -1,7 +1,9 @@
 export type DragonResponse = {
   id: number;
   name: string;
+  dragonPic: string | null;
   elementType: string;
+  elementTypeEmoji: string;
   level: number;
   power: number;
   rarity: string;
@@ -11,4 +13,5 @@ export type DragonResponse = {
   elementEmoji: string;
   rarityColor: string;
   rarityDisplayName: string;
+  rarityEmoji: string;
 };

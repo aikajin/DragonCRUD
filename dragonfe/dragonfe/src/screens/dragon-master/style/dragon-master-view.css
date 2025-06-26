@@ -1,0 +1,369 @@
+.dragon-master-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  padding: 24px;
+  color: #ffffff;
+}
+
+.dragon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #444;
+}
+
+.dragon-header h2 {
+  color: #ffd700;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+.dragon-filter-section {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #444;
+  backdrop-filter: blur(10px);
+}
+
+.search-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.dragon-search-input {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 25px !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid #ffd700 !important;
+  color: #ffffff !important;
+}
+.dragon-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.dragon-search-input:hover,
+.dragon-search-input:focus {
+  border-color: #ffed4e !important;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2) !important;
+}
+
+.dragon-search-input .ant-input {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.dragon-search-input .ant-input::placeholder {
+  color: #cccccc !important;
+}
+
+.search-icon {
+  color: #ffd700 !important;
+}
+
+.dragon-rarity-select {
+  min-width: 160px;
+}
+
+.dragon-rarity-select .ant-select-selector {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid #ffd700 !important;
+  border-radius: 25px !important;
+  color: #ffffff !important;
+}
+
+.dragon-rarity-select .ant-select-selection-item {
+  color: #ffffff !important;
+}
+
+.dragon-rarity-select .ant-select-arrow {
+  color: #ffd700 !important;
+}
+
+.element-filter-row {
+  margin-bottom: 20px;
+}
+
+.element-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.element-btn {
+  background: rgba(255, 215, 0, 0.1) !important;
+  border: 2px solid #ffd700 !important;
+  color: #ffd700 !important;
+  border-radius: 20px !important;
+  padding: 8px 20px !important;
+  height: auto !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.element-btn:hover {
+  background: rgba(255, 215, 0, 0.2) !important;
+  border-color: #ffed4e !important;
+  color: #ffed4e !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.element-btn.active {
+  background: #ffd700 !important;
+  color: #1a1a1a !important;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Element-specific colors */
+.element-water {
+  border-color: #4fc3f7 !important;
+  color: #4fc3f7 !important;
+}
+.element-water:hover {
+  border-color: #81d4fa !important;
+  color: #81d4fa !important;
+}
+.element-water.active {
+  background: #4fc3f7 !important;
+}
+
+.element-fire {
+  border-color: #ff5722 !important;
+  color: #ff5722 !important;
+}
+.element-fire:hover {
+  border-color: #ff7043 !important;
+  color: #ff7043 !important;
+}
+.element-fire.active {
+  background: #ff5722 !important;
+}
+
+.element-nature {
+  border-color: #4caf50 !important;
+  color: #4caf50 !important;
+}
+.element-nature:hover {
+  border-color: #66bb6a !important;
+  color: #66bb6a !important;
+}
+.element-nature.active {
+  background: #4caf50 !important;
+}
+
+.element-wind {
+  border-color: #9c27b0 !important;
+  color: #9c27b0 !important;
+}
+.element-wind:hover {
+  border-color: #ba68c8 !important;
+  color: #ba68c8 !important;
+}
+.element-wind.active {
+  background: #9c27b0 !important;
+}
+
+.element-earth {
+  border-color: #8d6e63 !important;
+  color: #8d6e63 !important;
+}
+.element-earth:hover {
+  border-color: #a1887f !important;
+  color: #a1887f !important;
+}
+.element-earth.active {
+  background: #8d6e63 !important;
+}
+
+.element-lightning {
+  border-color: #ffeb3b !important;
+  color: #ffeb3b !important;
+}
+.element-lightning:hover {
+  border-color: #fff176 !important;
+  color: #fff176 !important;
+}
+.element-lightning.active {
+  background: #ffeb3b !important;
+  color: #1a1a1a !important;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.action-btn {
+  background: rgba(255, 215, 0, 0.1) !important;
+  border: 1px solid #ffd700 !important;
+  color: #ffd700 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.action-btn:hover {
+  background: rgba(255, 215, 0, 0.2) !important;
+  border-color: #ffed4e !important;
+  color: #ffed4e !important;
+  transform: translateY(-1px);
+}
+
+.clear-btn {
+  background: rgba(255, 69, 58, 0.1) !important;
+  border: 1px solid #ff453a !important;
+  color: #ff453a !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.clear-btn:hover {
+  background: rgba(255, 69, 58, 0.2) !important;
+  border-color: #ff6b5a !important;
+  color: #ff6b5a !important;
+  transform: translateY(-1px);
+}
+
+.dragon-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #444;
+}
+
+.stats-container {
+  text-align: center;
+}
+
+.stats-container h3 {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid #ffd700;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-label {
+  color: #cccccc;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  color: #ffd700;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Dropdown customization */
+.ant-select-dropdown {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid #ffd700 !important;
+  border-radius: 8px !important;
+}
+
+.ant-select-item {
+  color: #ffffff !important;
+}
+
+.ant-select-item:hover {
+  background: rgba(255, 215, 0, 0.2) !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(255, 215, 0, 0.3) !important;
+  color: #ffd700 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dragon-search-input {
+    max-width: none;
+  }
+
+  .element-buttons {
+    justify-content: center;
+  }
+
+  .dragon-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+}
+
+.dragon-card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.dragon-badge {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-left: 6px;
+  /* background color is set inline for dynamic rarity color */
+}
+
+.dragon-card-meta {
+  margin: 12px 0 4px 0;
+  font-size: 0.95rem;
+  color: #d4d4d8;
+}
+
+.dragon-card-meta-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dragon-card-element {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.dragon-card-desc {
+  font-size: 0.95rem;
+  color: #a1a1aa;
+}
+
+.rarity-legendary { background: #ffd700; color: #222; }
+.rarity-common { background: #6b7280; }
+.rarity-rare { background: #22c55e; }
+.rarity-epic { background: #a78bfa; }
+.rarity-heroic { background: #f472b6; }

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Form, Modal, Select } from "antd";
+import { Form, Modal, Select, Upload, message } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 import GlobalInput from "../../../components/input/input";
 import { fetchElementTypes, fetchRarities } from "../services/enum.services";
+import { Button } from "antd";
 
 type DragonCreateProps = {
   visible: boolean;
@@ -13,6 +15,12 @@ const DragonCreate: React.FC<DragonCreateProps> = ({ visible, onCreate, onCancel
   const [form] = Form.useForm();
   const [elementTypes, setElementTypes] = useState<string[]>([]);
   const [rarities, setRarities] = useState<string[]>([]);
+    const normFile = (e: any) => {
+    if (Array.isArray(e)) {
+      return e;
+    }
+    return e && e.fileList;
+  };
 
   useEffect(() => {
     fetchElementTypes().then(setElementTypes);
@@ -43,6 +51,22 @@ const DragonCreate: React.FC<DragonCreateProps> = ({ visible, onCreate, onCancel
           rules={[{ required: true, message: "Please input the dragon's name!" }]}
         >
           <GlobalInput placeholder="Enter dragon name" />
+        </Form.Item>
+                <Form.Item
+          name="dragonPic"
+          label="Dragon Picture"
+          valuePropName="fileList"
+          getValueFromEvent={normFile}
+          rules={[{ required: true, message: "Please upload a dragon picture!" }]}
+        >
+          <Upload
+  name="dragonPic"
+  listType="picture"
+  beforeUpload={() => false}
+  maxCount={1}
+>
+  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+</Upload>
         </Form.Item>
         <Form.Item
           name="elementType"
